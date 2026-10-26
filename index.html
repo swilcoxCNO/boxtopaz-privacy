@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Privacy policy for the BoxTopaz Draw Bridge browser extension.">
+<title>BoxTopaz Draw Bridge — Privacy policy</title>
+<style>
+  :root { color-scheme: light; font-family: system-ui, sans-serif; color: #203047; background: #f5f7fb; }
+  body { max-width: 800px; margin: 48px auto; padding: 0 24px 48px; line-height: 1.65; }
+  main { padding: 36px; background: white; border: 1px solid #dde3ed; border-radius: 12px; }
+  h1 { margin: 0; color: #153264; font-size: 30px; line-height: 1.25; }
+  h2 { margin-top: 30px; font-size: 21px; line-height: 1.3; }
+  a { color: #205bc5; text-underline-offset: 3px; }
+  .meta, footer { color: #526075; font-size: 14px; }
+  code { overflow-wrap: anywhere; }
+  @media (max-width: 600px) { body { margin-top: 20px; } main { padding: 22px; } }
+</style>
+<main>
+<h1>BoxTopaz Draw Bridge<br>Privacy policy</h1>
+<p class="meta">Updated October 26, 2026 · Extension version 0.2.0</p>
+<p>This policy covers the custom BoxTopaz Draw Bridge browser extension. It does not cover the optional local web companion, Box, or the separately installed Topaz software.</p>
+
+<h2>Purpose and activation</h2>
+<p>The extension relays handwriting from a Topaz signature pad to the Draw signature field on configured Choctaw Nation Box Sign document pages. The user activates the extension from the browser toolbar and starts capture. The signer reviews the drawing and chooses whether to adopt it and complete the Box transaction.</p>
+
+<h2>Information processed</h2>
+<p>The extension reads the active tab's URL to verify that it is an HTTPS signing-document page on <code>choctawnation.app.box.com</code>. It locates the Draw canvas and inspects its pixels to check whether the canvas already contains ink. It reads tablet dimensions, connection/capture status, pen events, and handwriting stroke coordinates through the separately installed official Topaz extension and native bridge. Handwriting used as a signature may be personally identifying.</p>
+<p>During capture, the extension observes relevant page interactions and tab/window lifecycle events so it can stop capture when appropriate. It does not query browsing history, extract the PDF or signing document's text, read passwords, request Box API credentials, or implement analytics or advertising.</p>
+
+<h2>Use and sharing</h2>
+<p>Information is used to connect the pad, scale handwriting to the visible Draw field, relay strokes, show capture status, and stop capture. Coordinates and protocol responses are processed temporarily through browser memory and DOM messages. Stroke input is handed to the Box page's drawing component. If the signer adopts or submits the drawing, Box processes the signing transaction under its own terms and policies.</p>
+<p>The extension uses the official Topaz extension, native bridge, and driver to interact with the pad. Those components process capture data separately from this custom extension. Box and Topaz have their own privacy practices. This policy does not replace them.</p>
+<p>The custom extension has no developer-operated data collection endpoint, network upload implementation, telemetry, remote script loading, advertising, or sale of user data. It does not use handwriting for profiling or identity verification. It relays drawing input and does not attach Topaz biometric evidence or a certificate to the Box document. User data is used only for the extension's stated capture purpose, and is not used to determine creditworthiness or for lending.</p>
+
+<h2>Storage and stopping</h2>
+<p>The custom extension does not create signature files or write signature data to persistent browser storage. Temporary coordinate state is used during capture. Stop requests terminate capture and request that the native capture buffer be cleared. This does not claim secure erasure of browser/operating-system memory or control retention by the vendor components.</p>
+<p>The drawing remains in the Box page until changed through Box's own controls. Stopping capture does not delete a signature already placed or submitted in Box. Box handles document storage and signing records. The extension stops on its Stop control, applicable page/tab/window changes, or a two-minute limit; capture errors may require reloading the page.</p>
+
+<h2>Choices and contact</h2>
+<p>The user can stop capture, clear the drawing through Box, decline to adopt it, or disable/uninstall the custom extension where organizational policy permits.</p>
+<p>Publisher support and privacy contact: <a href="mailto:swilcox@choctawnation.com">swilcox@choctawnation.com</a>.</p>
+<p>Updates to this policy will be published here with an updated date when relevant practices change.</p>
+<footer>BoxTopaz Draw Bridge is a custom pilot integration, not an official Box or Topaz product. This policy does not certify the practices of third-party software.</footer>
+</main>
+</html>
